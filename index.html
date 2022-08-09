@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="header">
+      <a href="#"><img src="imagens/logo.svg" alt="" id="img-logo" /></a>
+      <nav id="nav">
+        <button id="btn-mobile"><span id="hamburguer"><img src="imagens/icon-menu.svg" alt=""> <img src="imagens/" alt=""></span></button>
+        <ul id="menu">
+          <li id="container-feature">
+            <a href="#"
+              >Features
+              <span
+                >
+                <img src="imagens/icon-arrow-up.svg" alt="" style="margin-left: 5px; margin-bottom: 2px;"/></span
+                ></a>
+                <div class="container-feature-dropdown">
+                  <a href=""> <img src="imagens/icon-todo.svg" alt="">Todo List</a>
+                  <a href=""><img src="imagens/icon-calendar.svg" alt="">Calendar</a>
+                  <a href=""><img src="imagens/icon-reminders.svg" alt="">Reminders</a>
+                  <a href=""><img src="imagens/icon-planning.svg" alt=""> planning</a>
+                </div>
+          </li>
+          <li id="container-company">
+            <a href="#"
+              >Company
+              <span id="active"
+                ><img src="imagens/icon-arrow-up.svg" alt="" style="margin-left: 5px;" /></span
+            ></a>
+            <div class="container-company-dropdown">
+              <a href="">History</a>
+              <a href="">Our Team</a>
+              <a href="">Blog</a>
+            </div>
+          </li>
+          <li><a href="#">Careers</a>
+          </li>
+          <li><a href="#">About</a></li>
+          <li class="container"><a href="#">Login</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="conteudo">
+      <section id="conteudo-principal">
+        <picture>
+          <source media="(max-width: 600px )" srcset="imagens/image-hero-mobile.png"> <img src="imagens/image-hero-desktop.png" id="conteudo-principal-img" alt="imageHero"></source>
+        </picture>
+        <div id="conteudo-principal-escrito">
+          <h1>Make remote work</h1>
+          <p> Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+          <button id="conteudo-principal-escrito-btn">Learn more</button>
+          <div id="conteudo-principal-escrito-img">
+            <span><img src="imagens/client-databiz.svg" alt=""></span>
+            <span><img src="imagens/client-audiophile.svg" alt=""></span>
+            <span><img src="imagens/client-meet.svg" alt=""></span>
+            <span><img src="imagens/client-maker.svg" alt=""></span>
+          </div>
+    
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
