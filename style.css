@@ -5,6 +5,10 @@
   margin: 0px;
 }
 
+body {
+  background-color: white;
+}
+
 h1,
 p {
   font-family: "Epilogue", sans-serif;
@@ -51,39 +55,40 @@ a:hover {
   padding: 0.7rem 1rem;
 }
 
+.img-icon {
+  width: 20px;
+  height: 15px;
+  background: url(imagens/icon-arrow-up.svg) no-repeat center;
+  transition: 0.2s;
+}
+
+#container-feature.active .img-icon,
+#container-company.active .img-icon {
+  width: 20px;
+  height: 15px;
+  background: url(imagens/icon-arrow-down.svg) no-repeat center;
+}
+
 .container-company-dropdown {
   display: none;
-  flex-direction: column;
-  width: 120px;
-  height: 120px;
   position: absolute;
   text-align: center;
   padding: 8px;
-  top: 70px;
-  left: 305px;
-  margin-left: 4rem;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.229);
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.153);
   border-radius: 5px;
 }
 
 .container-feature-dropdown {
   display: none;
-  flex-direction: column;
   text-align: center;
   padding: 5px 3px;
-  width: 150px;
-  height: 160px;
   position: absolute;
   box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.153);
-  left: 100px;
-  top: 70px;
-  right: 0px;
-  margin-left: 4rem;
   border-radius: 5px;
 }
 
 .container-feature-dropdown a {
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 500;
   text-align: center;
   margin-top: 2px;
@@ -97,6 +102,10 @@ a:hover {
 #container-feature.active .container-feature-dropdown,
 #container-company.active .container-company-dropdown {
   display: block;
+}
+
+.container-login {
+  display: flex;
 }
 
 #active img {
@@ -141,7 +150,7 @@ a:hover {
   color: hsl(0, 0%, 41%);
 }
 
-#conteudo-principal-escrito-btn{
+#conteudo-principal-escrito-btn {
   color: white;
   width: 150px;
   height: 55px;
@@ -150,11 +159,11 @@ a:hover {
   border-radius: 15px;
   margin-bottom: 4rem;
   background-color: black;
-  transition: .5s;
+  transition: 0.5s;
   cursor: pointer;
 }
 
-#conteudo-principal-escrito-btn:hover  {
+#conteudo-principal-escrito-btn:hover {
   background-color: white;
   color: hsl(0, 0%, 41%);
   font-weight: 700;
@@ -170,30 +179,135 @@ a:hover {
   display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1440px) {
+  #conteudo-principal {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #conteudo-principal-escrito {
+    margin-top: 1rem;
+  }
+
+  #conteudo-principal-escrito h1 {
+    font-size: 4rem;
+  }
+
+  #conteudo-principal-escrito p {
+    font-size: 1.4rem;
+  }
+
+  #conteudo-principal-img {
+    height: 600px;
+  }
+}
+
+@media (max-width: 1300px) {
+  #conteudo-principal {
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  #conteudo-principal-img {
+    height: 500px;
+  }
+
+  #conteudo-principal-escrito {
+    max-width: 600px;
+  }
+
+  #conteudo-principal h1 {
+    font-size: 3.5rem;
+  }
+
+  #conteudo-principal p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1000px) {
   #header {
     justify-content: space-between;
   }
   #menu {
     display: block;
     position: absolute;
-    width: 50%;
+    width: 60%;
     top: 70px;
-    right: 0px;
-    left: 0px;
-    background: rgb(112, 112, 112);
+    right: 0;
+    left: 30%;
+    height: 0;
+    background: rgb(255, 255, 255);
     z-index: 1000;
-    transition: 0.65s;
+    transition: 0.6s;
     visibility: hidden;
     overflow-y: hidden;
   }
 
   #nav.active #menu {
-    width: 50%;
     visibility: visible;
+    height: 155vh;
     border-bottom: 1px solid;
-    height: 100vh;
+    overflow-y: auto;
   }
+
+  #hamburguer {
+    height: 25px;
+    width: 25px;
+    background: url(imagens/icon-menu.svg) no-repeat;
+  }
+
+  #nav.active #hamburguer {
+    height: 25px;
+    width: 25px;
+    background: url(imagens/icon-close-menu.svg) no-repeat;
+  }
+
+  #menu li {
+    margin: 0.5rem 1rem;
+  }
+
+  .container-feature-dropdown {
+    margin-left: 1rem;
+    left: 0%;
+    border: none;
+    box-shadow: none;
+  }
+
+  #container-feature.active {
+    position: relative;
+    margin-bottom: 12rem;
+  }
+
+  .container-feature-dropdown {
+    margin-left: 1rem;
+    border: none;
+    box-shadow: 0px;
+  }
+
+  .container-company-dropdown {
+    margin-left: 1rem;
+    box-shadow: none;
+  }
+
+  #container-company.active {
+    margin-bottom: 9rem;
+  }
+
+  .container-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .container-login :nth-child(2) {
+    border: 1.7px solid black;
+    border-radius: 15px;
+    padding: 0rem 2.5rem;
+  }
+
   #btn-mobile {
     display: flex;
     padding: 0.5rem 1rem;
@@ -222,11 +336,12 @@ a:hover {
 
   #conteudo-principal-img {
     width: 100%;
+    height: auto;
   }
 
   #conteudo-principal-escrito {
     display: flex;
-    margin: -2rem 15px ;
+    margin: -2rem 15px;
     align-items: center;
     max-width: 100%;
     margin-left: 0px;
@@ -255,13 +370,12 @@ a:hover {
     gap: 1.5rem;
   }
 
-  #conteudo-principal-escrito-img span img{
+  #conteudo-principal-escrito-img span img {
     display: flex;
     align-items: center;
     margin-top: -2rem;
     margin-bottom: 4rem;
     width: 70px;
-  
   }
 
   #btn-lear,
@@ -271,6 +385,7 @@ a:hover {
     background-color: black;
     transition: 0.2s;
     cursor: pointer;
+    z-index: 1001;
   }
   #btn-lear:hover a {
     color: black;

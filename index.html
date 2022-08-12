@@ -7,19 +7,16 @@
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body id="body">
     <header id="header">
       <a href="#"><img src="imagens/logo.svg" alt="" id="img-logo" /></a>
       <nav id="nav">
-        <button id="btn-mobile"><span id="hamburguer"><img src="imagens/icon-menu.svg" alt=""> <img src="imagens/" alt=""></span></button>
+        <button id="btn-mobile"><span id="hamburguer"></span></button>
         <ul id="menu">
           <li id="container-feature">
             <a href="#"
               >Features
-              <span
-                >
-                <img src="imagens/icon-arrow-up.svg" alt="" style="margin-left: 5px; margin-bottom: 2px;"/></span
-                ></a>
+              <span class="img-icon"></span></a>
                 <div class="container-feature-dropdown">
                   <a href=""> <img src="imagens/icon-todo.svg" alt="">Todo List</a>
                   <a href=""><img src="imagens/icon-calendar.svg" alt="">Calendar</a>
@@ -30,8 +27,8 @@
           <li id="container-company">
             <a href="#"
               >Company
-              <span id="active"
-                ><img src="imagens/icon-arrow-up.svg" alt="" style="margin-left: 5px;" /></span
+              <span class="img-icon"
+                ></span
             ></a>
             <div class="container-company-dropdown">
               <a href="">History</a>
@@ -42,8 +39,10 @@
           <li><a href="#">Careers</a>
           </li>
           <li><a href="#">About</a></li>
-          <li class="container"><a href="#">Login</a></li>
-          <li><a href="#">Register</a></li>
+          <div class="container-login">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+          </div>
         </ul>
       </nav>
     </header>
@@ -51,7 +50,7 @@
     <main id="conteudo">
       <section id="conteudo-principal">
         <picture>
-          <source media="(max-width: 600px )" srcset="imagens/image-hero-mobile.png"> <img src="imagens/image-hero-desktop.png" id="conteudo-principal-img" alt="imageHero"></source>
+          <source media="(max-width: 600px)" srcset="imagens/image-hero-mobile.png"> <img src="imagens/image-hero-desktop.png" id="conteudo-principal-img" alt="imageHero"></source>
         </picture>
         <div id="conteudo-principal-escrito">
           <h1>Make remote work</h1>
